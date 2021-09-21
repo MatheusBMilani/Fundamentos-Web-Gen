@@ -32,26 +32,30 @@
 
             <form class=" mb-50">
                 <label for="nome">Nome:</label>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <div id='txtNome'></div>
+                
                 <br>
-                <input type="text" id="nome">
-                <br><br>
                 <label for="email">Email:</label>
+                <input type="text" id="email" onkeyup='validaEmail()'>
+                <div id="txtEmail"></div>
+                
                 <br>
-                <input type="text" id="email">
-                <br><br>
                 <label for="assunto">Assunto:</label>
                 <br>
-                <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
+                <textarea name="assunto" id="txtAssunto" cols="60" rows="15" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'></div>
                 <br>
-                <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
 
         <div class="ml-50">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1086.6817175690417!2d-46.77051581198844!3d-23.634904500078108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce538a40bb8079%3A0x74e10cef733463fd!2sR.%20Francisco%20Peixoto%20-%20Vila%20Pirajussara%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005786-110!5e0!3m2!1spt-BR!2sbr!4v1631800942312!5m2!1spt-BR!2sbr"
-                width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1086.6817175690417!2d-46.77051581198844!3d-23.
+                634904500078108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce538a40bb8079%3A0x74e10cef733463fd!2sR.
+                %20Francisco%20Peixoto%20-%20Vila%20Pirajussara%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005786-110!5e0!3m2!1spt-BR!2sbr!4v1631800942312!5m2!1spt-BR!2sbr"
+                width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id='mapa'></iframe>
         </div>
 
     </div>
@@ -79,6 +83,11 @@
             Todos os direitos reservados: LOBINHO MILANI &copy;
         </p>
     </footer>
+
+<script src="C:\Users\brutu\Desktop\Projeto Web\Fundamentos Web\Fundamentos-Web-Gen\Aula1\js\script.js">
+
+
+</script>
 
 </body>
 
